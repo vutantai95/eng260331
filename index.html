@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fighting Child Marriage Through Football · BBC Learning English</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --accent: #b05e2f;
+  --accent-light: #f2ddd0;
+  --accent-dark: #7a3e1a;
+  --bg: #fdf6f0;
+  --bg-alt: #f5e9de;
+  --text: #2c1a0e;
+  --text-light: #7a4f30;
+  --border: #e8cdb8;
+  --overlay: rgba(44, 18, 6, 0.82);
+  --overlay-fixed: rgba(52, 22, 8, 0.96);
+  --hero-img: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80');
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  background-image: var(--hero-img);
+  background-size: cover;
+  background-position: center top;
+}
+
+.hero-overlay {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--overlay);
+  padding: 0;
+}
+
+/* Masthead */
+.masthead {
+  padding: 3rem 2rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+
+.meta-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 0.3em 0.8em;
+  border-radius: 2px;
+}
+
+.meta-tag.level {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.01em;
+}
+
+.hero-subtitle {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  font-style: italic;
+  max-width: 640px;
+}
+
+/* Summary box */
+.summary-box {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem 2rem;
+}
+
+.summary-inner {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 1.4rem 1.8rem;
+  transition: background 0.3s;
+}
+
+.summary-inner.vi-open {
+  background: rgba(0,0,0,0.35);
+}
+
+.summary-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 0.7rem;
+}
+
+.summary-en {
+  color: #fff;
+  font-size: 0.97rem;
+  line-height: 1.65;
+  margin-bottom: 0.8rem;
+}
+
+.toggle-vi-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 0.35em 0.9em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.toggle-vi-btn:hover { background: rgba(255,255,255,0.25); }
+
+.summary-vi {
+  display: none;
+  color: rgba(255,255,255,0.88);
+  font-size: 0.93rem;
+  line-height: 1.65;
+  margin-top: 0.8rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 0.8rem;
+  font-style: italic;
+}
+
+/* Nav */
+.hero-nav {
+  margin-top: auto;
+  width: 100%;
+  transition: opacity 0.3s, pointer-events 0s;
+}
+
+.hero-nav.vi-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-inner {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding: 0 1rem;
+}
+
+.nav-inner::-webkit-scrollbar { display: none; }
+
+.nav-tab {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  padding: 0.9em 1.1em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-tab:hover { color: rgba(255,255,255,0.85); }
+.nav-tab.active {
+  color: #fff;
+  border-bottom-color: var(--accent);
+}
+
+/* Fixed nav */
+.nav-fixed-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--overlay-fixed);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.nav-fixed-wrap.visible { display: block; }
+
+.nav-spacer { display: none; height: 42px; }
+.nav-spacer.visible { display: block; }
+
+/* ── CONTENT ── */
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* Section headings */
+.section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+h2.tab-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid var(--border);
+}
+
+/* ── TAB 1: BILINGUAL ── */
+.bilingual-para {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.bilingual-para:last-child { border-bottom: none; }
+
+.lang-en { font-size: 0.97rem; line-height: 1.75; }
+.lang-vi { font-size: 0.93rem; line-height: 1.75; color: var(--text-light); font-style: italic; }
+
+.speaker-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.hl { color: var(--accent); font-weight: 600; }
+
+@media (max-width: 640px) {
+  .bilingual-para { grid-template-columns: 1fr; gap: 0.6rem; }
+  .lang-vi { border-left: 3px solid var(--border); padding-left: 0.8rem; }
+}
+
+/* ── TAB 2: VOCABULARY ── */
+.vocab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.vocab-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  transition: box-shadow 0.2s;
+}
+
+.vocab-card:hover { box-shadow: 0 3px 12px rgba(176,94,47,0.15); }
+
+.vocab-word {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+.vocab-ipa {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-light);
+  margin: 0.1rem 0;
+}
+
+.vocab-pos {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  padding: 0.15em 0.5em;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.vocab-meaning { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem; }
+
+.vocab-example {
+  font-size: 0.83rem;
+  color: var(--text-light);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.vocab-ex-vi { font-size: 0.78rem; color: #aaa; margin-top: 0.2rem; }
+
+/* ── TAB 3: GRAMMAR ── */
+.grammar-block {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.grammar-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin-bottom: 0.5rem;
+}
+
+.grammar-formula {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  background: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0 4px 4px 0;
+  margin: 0.7rem 0;
+  color: var(--accent-dark);
+}
+
+.grammar-example {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin: 0.6rem 0;
+  font-size: 0.9rem;
+}
+
+.grammar-example .en { font-style: italic; color: var(--text); }
+.grammar-example .vi { font-size: 0.82rem; color: var(--text-light); margin-top: 0.2rem; }
+.grammar-example .analysis { font-family: 'Space Mono', monospace; font-size: 0.68rem; color: var(--accent); margin-top: 0.3rem; }
+
+.exercise-area { margin-top: 1rem; }
+.exercise-q {
+  font-size: 0.9rem;
+  margin: 0.8rem 0 0.4rem;
+  font-weight: 600;
+}
+
+.exercise-input {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.35em 0.7em;
+  background: #fff;
+  color: var(--text);
+  width: 100%;
+  max-width: 400px;
+}
+
+.show-ans-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4em 0.9em;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  transition: background 0.2s;
+}
+
+.show-ans-btn:hover { background: var(--accent-dark); }
+
+.answer-reveal {
+  display: none;
+  font-size: 0.85rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+  margin-top: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--accent-light);
+  border-radius: 4px;
+}
+
+/* ── TAB 4: EXERCISES ── */
+.quiz-q {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.quiz-q-text { font-size: 0.97rem; font-weight: 600; margin-bottom: 0.8rem; }
+
+.quiz-options { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.quiz-opt {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.9rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.quiz-opt:hover { border-color: var(--accent); background: var(--accent-light); }
+.quiz-opt.correct { background: #e8f5e9; border-color: #4caf50; color: #1b5e20; }
+.quiz-opt.wrong { background: #fdecea; border-color: #e57373; color: #7f0000; }
+
+.quiz-feedback {
+  display: none;
+  font-size: 0.83rem;
+  margin-top: 0.6rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.quiz-feedback.show { display: block; }
+.quiz-feedback.ok { background: #e8f5e9; color: #1b5e20; }
+.quiz-feedback.no { background: #fdecea; color: #7f0000; }
+
+/* ── TAB 5: DISCUSSION ── */
+.disc-topics { display: flex; flex-direction: column; gap: 0.8rem; }
+
+.disc-btn {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.95rem;
+  text-align: left;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  color: var(--text);
+}
+
+.disc-btn:hover { border-color: var(--accent); background: var(--accent-light); }
+.disc-btn.open { border-color: var(--accent); background: var(--accent-light); }
+
+.disc-panel {
+  display: none;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 0 0 8px 8px;
+  padding: 1.2rem;
+  margin-top: -1px;
+}
+
+.disc-panel.show { display: block; }
+
+.disc-panel-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.ai-btns { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+
+.ai-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  padding: 0.45em 0.9em;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.ai-btn:hover { opacity: 0.8; }
+.btn-claude { background: #d97706; color: #fff; }
+.btn-copy { background: var(--text); color: #fff; }
+.btn-deepseek { background: #1e40af; color: #fff; }
+.btn-chatgpt { background: #10a37f; color: #fff; }
+
+/* ── TAB 6: WRITING ── */
+.writing-cards { display: flex; flex-direction: column; gap: 0.8rem; }
+
+.writing-card-btn {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.95rem;
+  text-align: left;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  color: var(--text);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.writing-card-btn:hover { border-color: var(--accent); }
+.writing-card-btn.open { border-color: var(--accent); background: var(--accent-light); }
+
+.writing-editor {
+  display: none;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 1.2rem;
+}
+
+.writing-editor.show { display: block; }
+
+.word-count-bar {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.phrase-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.phrase-chip {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.25em 0.7em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.phrase-chip:hover { background: var(--accent); color: #fff; }
+
+.writing-textarea {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.95rem;
+  width: 100%;
+  min-height: 160px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.7rem 0.9rem;
+  resize: vertical;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+/* ── TAB 7: SHADOWING ── */
+.shadow-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.3rem 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.chunk-line {
+  font-size: 1.05rem;
+  font-family: 'Source Serif 4', serif;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
+.ck0 { color: #b05e2f; font-weight: 600; }
+.ck1 { color: #1e40af; font-weight: 600; }
+.ck2 { color: #065f46; font-weight: 600; }
+.ck3 { color: #7e22ce; font-weight: 600; }
+
+.shadow-vi { font-size: 0.83rem; color: var(--text-light); font-style: italic; margin-bottom: 0.6rem; }
+
+.shadow-notes { font-size: 0.82rem; color: var(--text-light); margin-bottom: 0.6rem; line-height: 1.55; }
+
+.shadow-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+.shadow-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  padding: 0.2em 0.6em;
+  border-radius: 2px;
+}
+
+.ipa-toggle-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-light);
+  padding: 0.3em 0.7em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.ipa-toggle-btn:hover { background: var(--accent-light); }
+
+.ipa-reveal { display: none; font-family: 'Space Mono', monospace; font-size: 0.75rem; color: var(--accent-dark); margin-top: 0.5rem; padding: 0.4rem 0.8rem; background: var(--bg); border-radius: 4px; }
+
+/* ── TAB 8: FLASHCARD ── */
+.flashcard-area { max-width: 480px; margin: 0 auto; }
+
+.fc-progress-bar-wrap {
+  height: 5px; background: var(--border); border-radius: 3px; margin-bottom: 1rem; overflow: hidden;
+}
+.fc-progress-bar { height: 100%; background: var(--accent); border-radius: 3px; transition: width 0.4s; }
+
+.fc-counter {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.fc-scene {
+  perspective: 1000px;
+  height: 250px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.fc-card {
+  width: 100%; height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);
+}
+
+.fc-card.flipped { transform: rotateY(180deg); }
+
+.fc-face {
+  position: absolute; width: 100%; height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.fc-front {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(176,94,47,0.3);
+}
+
+.fc-back {
+  background: #fff;
+  border: 2px solid var(--border);
+  transform: rotateY(180deg);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.fc-front-word {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.fc-front-hint {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  opacity: 0.7;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.fc-back-word { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--accent-dark); }
+.fc-back-ipa { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--text-light); margin: 0.2rem 0; }
+.fc-back-pos { font-family: 'Space Mono', monospace; font-size: 0.6rem; background: var(--accent-light); color: var(--accent-dark); padding: 0.15em 0.5em; border-radius: 2px; margin-bottom: 0.4rem; }
+.fc-back-meaning { font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+.fc-back-example { font-size: 0.75rem; color: var(--text-light); font-style: italic; line-height: 1.5; }
+
+.fc-rating { display: none; justify-content: center; gap: 0.6rem; margin-bottom: 0.8rem; }
+.fc-rating.show { display: flex; }
+
+.fc-rate-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.07em;
+  border: none;
+  border-radius: 4px;
+  padding: 0.45em 1.1em;
+  cursor: pointer;
+}
+.fc-rate-btn.know { background: #d1fae5; color: #065f46; }
+.fc-rate-btn.dontknow { background: #fdecea; color: #7f0000; }
+
+.fc-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+
+.fc-ctrl-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.45em 0.9em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.fc-ctrl-btn:hover { background: var(--accent-light); }
+.fc-mode-toggle {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.fc-mode-toggle:hover { background: var(--accent-dark); }
+
+.fc-stats {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-top: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  padding: 0.7em 1.4em;
+  border-radius: 6px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.toast.show { opacity: 1; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .masthead { padding: 2rem 1.2rem 1.5rem; }
+  .summary-box { padding: 0 1.2rem 1.5rem; }
+  .content { padding: 1.5rem 1rem 3rem; }
+  .vocab-grid { grid-template-columns: 1fr; }
+  .fc-scene { height: 260px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <div class="hero-overlay" id="heroOverlay">
+
+    <!-- Masthead -->
+    <div class="masthead">
+      <div class="meta-row">
+        <span class="meta-tag">BBC Learning English</span>
+        <span class="meta-tag">Our World in English</span>
+        <span class="meta-tag">Social / Human Rights</span>
+        <span class="meta-tag">Divya Arya · 2026</span>
+        <span class="meta-tag level">B2</span>
+      </div>
+      <h1 class="hero-title">Fighting Child Marriage<br><em>Through Football</em></h1>
+      <p class="hero-subtitle">How a girls' football project in Rajasthan became an unlikely weapon against one of India's most persistent social crises.</p>
+    </div>
+
+    <!-- 1-minute summary -->
+    <div class="summary-box">
+      <div class="summary-inner" id="summaryInner">
+        <div class="summary-label">⏱ 1-minute summary</div>
+        <p class="summary-en">In the Indian state of Rajasthan, child marriage remains widespread despite being illegal — UNICEF estimates 216 million girls in India have been married before age 18. This BBC documentary follows Munna, a 19-year-old who used football to escape becoming a child bride at 14. A women's rights organisation called MJAS runs the "Football for Freedom" project, introducing the sport to 800 girls across 13 villages. While football has given girls confidence and a voice, the fight is far from over — Munna still faces family pressure and a three-way exchange marriage proposal. The story explores why legal deterrents alone fail and why mindset change in communities is essential.</p>
+        <div style="display:flex; align-items:center; gap:0.8rem; flex-wrap:wrap; margin-top:0.6rem;">
+          <button class="toggle-vi-btn" id="toggleViBtn">🇻🇳 Xem bản dịch</button>
+        </div>
+        <div class="summary-vi" id="summaryVi">
+          Tại bang Rajasthan của Ấn Độ, hôn nhân trẻ em vẫn còn rất phổ biến dù đã bị cấm theo luật — UNICEF ước tính có tới 216 triệu bé gái ở Ấn Độ đã kết hôn trước 18 tuổi. Phóng sự của BBC theo chân Munna, cô gái 19 tuổi dùng bóng đá để thoát khỏi số phận hôn nhân ép buộc từ năm 14 tuổi. Tổ chức quyền phụ nữ MJAS điều hành dự án "Bóng đá vì Tự do", giới thiệu môn thể thao này đến hơn 800 bé gái tại 13 ngôi làng. Dù bóng đá đã giúp các em mạnh mẽ hơn và dám lên tiếng, cuộc chiến vẫn còn tiếp diễn — Munna vẫn đang chịu áp lực từ gia đình và một cuộc hôn nhân đổi chéo ba bên. Câu chuyện khám phá lý do tại sao luật pháp đơn thuần không đủ và tại sao thay đổi tư duy cộng đồng mới là điều cốt lõi.
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Nav -->
+    <nav class="hero-nav" id="heroNav">
+      <div class="nav-inner">
+        <button class="nav-tab active" data-tab="bilingual">① Song ngữ</button>
+        <button class="nav-tab" data-tab="vocab">② Từ vựng</button>
+        <button class="nav-tab" data-tab="grammar">③ Ngữ pháp</button>
+        <button class="nav-tab" data-tab="exercises">④ Bài tập</button>
+        <button class="nav-tab" data-tab="discussion">⑤ Thảo luận</button>
+        <button class="nav-tab" data-tab="writing">⑥ Writing</button>
+        <button class="nav-tab" data-tab="shadowing">⑦ Shadowing</button>
+        <button class="nav-tab" data-tab="flashcard">⑧ Flashcard</button>
+      </div>
+    </nav>
+
+  </div><!-- /hero-overlay -->
+</div><!-- /hero -->
+
+<!-- Fixed nav (appears on scroll) -->
+<div class="nav-fixed-wrap" id="navFixed">
+  <div class="nav-inner">
+    <button class="nav-tab active" data-tab="bilingual">① Song ngữ</button>
+    <button class="nav-tab" data-tab="vocab">② Từ vựng</button>
+    <button class="nav-tab" data-tab="grammar">③ Ngữ pháp</button>
+    <button class="nav-tab" data-tab="exercises">④ Bài tập</button>
+    <button class="nav-tab" data-tab="discussion">⑤ Thảo luận</button>
+    <button class="nav-tab" data-tab="writing">⑥ Writing</button>
+    <button class="nav-tab" data-tab="shadowing">⑦ Shadowing</button>
+    <button class="nav-tab" data-tab="flashcard">⑧ Flashcard</button>
+  </div>
+</div>
+<div class="nav-spacer" id="navSpacer"></div>
+
+<!-- CONTENT -->
+<main class="content" id="mainContent">
+
+  <!-- TAB 1: BILINGUAL -->
+  <div class="tab-panel active" data-panel="bilingual">
+    <p class="section-label">Bài học · Tab 1</p>
+    <h2 class="tab-title">Bài viết song ngữ</h2>
+    <div id="bilingualContainer"></div>
+  </div>
+
+  <!-- TAB 2: VOCAB -->
+  <div class="tab-panel" data-panel="vocab">
+    <p class="section-label">Bài học · Tab 2</p>
+    <h2 class="tab-title">Từ vựng trọng tâm</h2>
+    <div class="vocab-grid" id="vocabContainer"></div>
+  </div>
+
+  <!-- TAB 3: GRAMMAR -->
+  <div class="tab-panel" data-panel="grammar">
+    <p class="section-label">Bài học · Tab 3</p>
+    <h2 class="tab-title">Cấu trúc ngữ pháp</h2>
+    <div id="grammarContainer"></div>
+  </div>
+
+  <!-- TAB 4: EXERCISES -->
+  <div class="tab-panel" data-panel="exercises">
+    <p class="section-label">Bài học · Tab 4</p>
+    <h2 class="tab-title">Bài tập luyện tập</h2>
+    <div id="exercisesContainer"></div>
+  </div>
+
+  <!-- TAB 5: DISCUSSION -->
+  <div class="tab-panel" data-panel="discussion">
+    <p class="section-label">Bài học · Tab 5</p>
+    <h2 class="tab-title">Chủ đề thảo luận</h2>
+    <div class="disc-topics" id="discussionContainer"></div>
+  </div>
+
+  <!-- TAB 6: WRITING -->
+  <div class="tab-panel" data-panel="writing">
+    <p class="section-label">Bài học · Tab 6</p>
+    <h2 class="tab-title">Luyện viết</h2>
+    <div class="writing-cards" id="writingContainer"></div>
+  </div>
+
+  <!-- TAB 7: SHADOWING -->
+  <div class="tab-panel" data-panel="shadowing">
+    <p class="section-label">Bài học · Tab 7</p>
+    <h2 class="tab-title">Shadowing — Luyện phát âm</h2>
+    <div id="shadowingContainer"></div>
+  </div>
+
+  <!-- TAB 8: FLASHCARD -->
+  <div class="tab-panel" data-panel="flashcard">
+    <p class="section-label">Bài học · Tab 8</p>
+    <h2 class="tab-title">Flashcard từ vựng</h2>
+    <div class="flashcard-area" id="flashcardArea"></div>
+  </div>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ─────────────────────────────────────────
+// ARTICLE DATA
+// ─────────────────────────────────────────
+const ARTICLE_CONTEXT = "This BBC documentary, 'Fighting Child Marriage Through Football', follows Munna, a 19-year-old from Rajasthan, India, who used football to escape child marriage at age 14. The MJAS women's rights organisation runs the 'Football for Freedom' project across 13 villages, empowering over 800 girls. Despite being illegal, child marriage persists due to deep-rooted customs and lack of legal enforcement. The story highlights that sustained change requires community mindset shifts, not just legislation, and that financial independence for girls is key to real freedom.";
+const ARTICLE_LEVEL = "B2";
+
+// ─────────────────────────────────────────
+// BILINGUAL DATA
+// ─────────────────────────────────────────
+const bilingualData = [
+  {
+    speaker: "Georgie (narrator)",
+    en: "In this village in the Indian state of Rajasthan, women are mostly <span class='hl'>illiterate</span>, which means they cannot read and write. And they also get married early. Laali says everything changed when she became a <span class='hl'>child bride</span>.",
+    vi: "Ở ngôi làng này thuộc bang Rajasthan của Ấn Độ, phụ nữ hầu hết đều mù chữ, nghĩa là họ không thể đọc hay viết. Và họ cũng kết hôn sớm. Laali nói rằng mọi thứ đã thay đổi khi cô trở thành một cô dâu trẻ em."
+  },
+  {
+    speaker: "Laali",
+    en: "It made life so difficult. Bringing up children, taking care of the husband and daily chores. And if you get a husband who is <span class='hl'>alcoholic</span> then it's very difficult to run the household.",
+    vi: "Nó khiến cuộc sống trở nên thật khó khăn. Nuôi dạy con cái, chăm sóc chồng và việc nhà hằng ngày. Và nếu bạn lấy phải một người chồng nghiện rượu thì rất khó để duy trì gia đình."
+  },
+  {
+    speaker: "Georgie (narrator)",
+    en: "Though illegal, child marriage is <span class='hl'>widely practiced</span> in India, especially here in Rajasthan. UNICEF's latest estimate is that 216 million girls and women in India today have been married before they turned 18.",
+    vi: "Mặc dù bị cấm theo luật, hôn nhân trẻ em vẫn được thực hành rộng rãi ở Ấn Độ, đặc biệt tại Rajasthan. Ước tính mới nhất của UNICEF cho thấy 216 triệu bé gái và phụ nữ ở Ấn Độ hiện nay đã kết hôn trước khi bước sang tuổi 18."
+  },
+  {
+    speaker: "Laali",
+    en: "They say that if girls <span class='hl'>step out of their homes</span>, they will be exposed to bad influences and run away with boys. We do the marriage quietly. We don't print a wedding invitation or put up a tent.",
+    vi: "Người ta nói rằng nếu các bé gái bước ra khỏi nhà, chúng sẽ bị ảnh hưởng xấu và bỏ trốn theo trai. Chúng tôi tổ chức hôn nhân âm thầm. Không in thiệp cưới, không dựng lều."
+  },
+  {
+    speaker: "Munna",
+    en: "When they told me you will be married too. I started crying. I said I don't want to marry right now. I am in Grade nine, I want to study.",
+    vi: "Khi họ nói với tôi rằng bạn cũng sẽ được gả đi. Tôi bắt đầu khóc. Tôi nói tôi không muốn lấy chồng lúc này. Tôi đang học lớp chín, tôi muốn tiếp tục học."
+  },
+  {
+    speaker: "Georgie (narrator)",
+    en: "Padma was the one to introduce football to Munna. And to 800 other girls across 13 villages in Rajasthan over the past decade. She has been leading the <span class='hl'>Football for Freedom</span> project at MJAS, a women's rights organisation.",
+    vi: "Padma là người đã giới thiệu bóng đá cho Munna. Và cho 800 bé gái khác tại 13 ngôi làng ở Rajasthan trong thập kỷ qua. Cô đang dẫn dắt dự án 'Bóng đá vì Tự do' tại MJAS, một tổ chức quyền phụ nữ."
+  },
+  {
+    speaker: "Padma",
+    en: "When we started talking to parents, we never said that we are introducing football to stop child marriage. We said the sport will take girls forward. They will be able to get <span class='hl'>government jobs</span> that they are allocated to sportspersons. That was our approach.",
+    vi: "Khi chúng tôi bắt đầu nói chuyện với phụ huynh, chúng tôi không bao giờ nói rằng chúng tôi đưa bóng đá vào để ngăn hôn nhân trẻ em. Chúng tôi nói rằng thể thao sẽ đưa các bé gái tiến xa hơn. Họ sẽ có thể xin được việc làm chính phủ dành cho vận động viên. Đó là cách tiếp cận của chúng tôi."
+  },
+  {
+    speaker: "Divya (reporter)",
+    en: "Munna's village football team is <span class='hl'>clad in</span> bright yellow jerseys... The picture is a <span class='hl'>stark contrast</span> from how I saw them and their mothers in their villages. These girls are playing as if without a care in the world, with <span class='hl'>complete abandon</span>.",
+    vi: "Đội bóng đá làng của Munna mặc áo đấu vàng tươi... Hình ảnh này hoàn toàn tương phản với những gì tôi thấy ở họ và các bà mẹ trong làng. Những cô gái này đang thi đấu như thể không có gì trên đời, với sự phóng khoáng hoàn toàn."
+  },
+  {
+    speaker: "Padma",
+    en: "Instead of stopping one or two marriages, we believe <span class='hl'>sustained change</span> can only come when their mindset changes and then that might stop child marriage. The other challenge is they don't have opportunities to be <span class='hl'>financially independent</span> and live a life of dignity.",
+    vi: "Thay vì ngăn chặn một hay hai cuộc hôn nhân, chúng tôi tin rằng sự thay đổi bền vững chỉ đến khi tư duy của họ thay đổi và điều đó mới có thể chấm dứt hôn nhân trẻ em. Thách thức khác là các em không có cơ hội để tự chủ tài chính và sống cuộc đời có phẩm giá."
+  },
+  {
+    speaker: "Munna",
+    en: "Younger girls are able to step out because they see older ones like me out there. For those girls who are already child brides, I feel I have to pull these girls out and — whether I am able to stop their marriage or not — help them become something in life, <span class='hl'>realise their dreams</span>.",
+    vi: "Những bé gái nhỏ hơn dám bước ra ngoài vì chúng thấy những người lớn hơn như tôi ở đây. Với những cô gái đã là cô dâu trẻ em, tôi cảm thấy mình phải kéo họ ra và — dù có thể ngăn được hôn nhân của họ hay không — giúp họ trở thành điều gì đó trong cuộc sống, thực hiện ước mơ của họ."
+  }
+];
+
+// ─────────────────────────────────────────
+// VOCABULARY DATA
+// ─────────────────────────────────────────
+const vocabData = [
+  { word: "illiterate", ipa: "/ɪˈlɪt.ər.ət/", pos: "adj", meaning: "Mù chữ, không biết đọc viết", example: "Women are mostly illiterate, which means they cannot read and write.", exVi: "Phụ nữ hầu hết mù chữ, nghĩa là họ không thể đọc và viết." },
+  { word: "child bride", ipa: "/tʃaɪld braɪd/", pos: "n (phr)", meaning: "Cô dâu trẻ em", example: "Everything changed when she became a child bride.", exVi: "Mọi thứ đã thay đổi khi cô trở thành một cô dâu trẻ em." },
+  { word: "illicit", ipa: "/ɪˈlɪs.ɪt/", pos: "adj", meaning: "Bất hợp pháp, trái phép", example: "Though illegal, child marriage is widely practiced in India.", exVi: "Mặc dù bất hợp pháp, hôn nhân trẻ em vẫn được thực hành rộng rãi." },
+  { word: "widely practiced", ipa: "/ˈwaɪd.li ˈpræk.tɪst/", pos: "phr", meaning: "Được thực hành rộng rãi", example: "Child marriage is widely practiced in India, especially in Rajasthan.", exVi: "Hôn nhân trẻ em được thực hành rộng rãi ở Ấn Độ, đặc biệt ở Rajasthan." },
+  { word: "expose (to)", ipa: "/ɪkˈspəʊz/", pos: "v", meaning: "Phơi bày, đưa vào tiếp xúc với", example: "If girls step out of their homes, they will be exposed to bad influences.", exVi: "Nếu bé gái ra ngoài, chúng sẽ bị tiếp xúc với những ảnh hưởng xấu." },
+  { word: "plead", ipa: "/pliːd/", pos: "v", meaning: "Cầu xin, năn nỉ", example: "They pleaded that I be married to their younger son.", exVi: "Họ cầu xin để tôi được gả cho con trai út của họ." },
+  { word: "resist", ipa: "/rɪˈzɪst/", pos: "v", meaning: "Kháng cự, chống lại", example: "Some girls and young women are trying to resist the practice.", exVi: "Một số bé gái đang cố gắng kháng cự tập tục này." },
+  { word: "clad in", ipa: "/klæd ɪn/", pos: "phr v", meaning: "Mặc, khoác trên người", example: "Munna's village football team is clad in bright yellow jerseys.", exVi: "Đội bóng đá làng của Munna mặc áo đấu vàng tươi." },
+  { word: "stark contrast", ipa: "/stɑːk ˈkɒn.trɑːst/", pos: "n (phr)", meaning: "Sự tương phản rõ rệt", example: "The picture is a stark contrast from how I saw them in their villages.", exVi: "Hình ảnh này là một sự tương phản rõ rệt so với những gì tôi thấy trong làng." },
+  { word: "complete abandon", ipa: "/kəmˈpliːt əˈbæn.dən/", pos: "n (phr)", meaning: "Sự phóng khoáng hoàn toàn, không kìm chế", example: "These girls are playing with complete abandon.", exVi: "Những cô gái này đang thi đấu với sự phóng khoáng hoàn toàn." },
+  { word: "conviction", ipa: "/kənˈvɪk.ʃən/", pos: "n", meaning: "Bản án kết tội; sự tin tưởng mạnh mẽ", example: "It becomes very difficult to get a conviction.", exVi: "Rất khó để có được một bản án kết tội." },
+  { word: "sustained change", ipa: "/səˈsteɪnd tʃeɪndʒ/", pos: "n (phr)", meaning: "Sự thay đổi bền vững, lâu dài", example: "Sustained change can only come when their mindset changes.", exVi: "Sự thay đổi bền vững chỉ đến khi tư duy của họ thay đổi." },
+  { word: "mindset", ipa: "/ˈmaɪnd.set/", pos: "n", meaning: "Tư duy, cách nghĩ", example: "Change can only come when their mindset changes.", exVi: "Sự thay đổi chỉ đến khi tư duy của họ thay đổi." },
+  { word: "financially independent", ipa: "/faɪˈnæn.ʃəl.i ˌɪn.dɪˈpen.dənt/", pos: "adj (phr)", meaning: "Tự chủ tài chính", example: "Girls need jobs which can help them be financially independent.", exVi: "Các bé gái cần có công việc giúp họ tự chủ về tài chính." },
+  { word: "dignity", ipa: "/ˈdɪɡ.nɪ.ti/", pos: "n", meaning: "Phẩm giá, nhân phẩm", example: "They need jobs to live a life of dignity.", exVi: "Họ cần việc làm để sống cuộc đời có phẩm giá." },
+  { word: "spectacle", ipa: "/ˈspek.tɪ.kəl/", pos: "n", meaning: "Cảnh tượng đáng chú ý", example: "The women watching them are recording the spectacle on their smartphones.", exVi: "Những người phụ nữ đang xem họ ghi lại cảnh tượng này trên điện thoại." },
+  { word: "spontaneous", ipa: "/spɒnˈteɪ.ni.əs/", pos: "adj", meaning: "Tự phát, không có kế hoạch trước", example: "The girls break into a spontaneous dance.", exVi: "Các bé gái bắt đầu nhảy múa một cách tự phát." },
+  { word: "in exchange", ipa: "/ɪn ɪksˈtʃeɪndʒ/", pos: "phr", meaning: "Để đổi lấy, như một sự đổi chác", example: "Many families exchange their daughters to be brides as part of the custom.", exVi: "Nhiều gia đình đổi con gái của họ để làm cô dâu như một phần của phong tục." },
+  { word: "step out", ipa: "/step aʊt/", pos: "phr v", meaning: "Bước ra ngoài, rời khỏi nơi an toàn", example: "Girls are able to step out because they see older ones like me out there.", exVi: "Các bé gái dám bước ra ngoài vì chúng thấy những người lớn hơn như tôi ở đó." },
+  { word: "raise their voices", ipa: "/reɪz ðeər ˈvɔɪ.sɪz/", pos: "phr v", meaning: "Lên tiếng, cất tiếng nói", example: "Because girls were stepping out, they were able to raise their voices.", exVi: "Vì các bé gái dám bước ra ngoài, họ có thể lên tiếng." }
+];
+
+// ─────────────────────────────────────────
+// GRAMMAR DATA
+// ─────────────────────────────────────────
+const grammarData = [
+  {
+    title: "Passive Voice — Present Perfect",
+    formula: "Subject + have/has + been + past participle",
+    explanation: "Dùng để nói về hành động xảy ra trong quá khứ, ảnh hưởng đến hiện tại, mà chúng ta không biết hoặc không cần đề cập đến người thực hiện hành động.",
+    examples: [
+      { en: "216 million girls and women in India today have been married before they turned 18.", vi: "216 triệu bé gái và phụ nữ ở Ấn Độ ngày nay đã được gả đi trước khi họ bước sang tuổi 18.", analysis: "Subject: girls → have been married (passive). Agent (who married them) is not mentioned." },
+      { en: "She has been leading the Football for Freedom project at MJAS.", vi: "Cô ấy đã dẫn dắt dự án Bóng đá vì Tự do tại MJAS (trong thời gian dài).", analysis: "Present perfect continuous — action started in the past and continues now." }
+    ],
+    exercise: { q: "Rewrite: 'People practice child marriage widely in India.' → Child marriage _____ widely _____ in India.", answer: "is widely practiced" }
+  },
+  {
+    title: "Conditional — Zero & First Conditional",
+    formula: "If + present simple, subject + will/can + base verb",
+    explanation: "Zero conditional dùng cho sự thật chung; First conditional dùng cho kết quả có thể xảy ra trong tương lai dựa trên điều kiện ở hiện tại.",
+    examples: [
+      { en: "If girls step out of their homes, they will be exposed to bad influences.", vi: "Nếu bé gái bước ra ngoài, chúng sẽ bị ảnh hưởng xấu.", analysis: "First conditional: If + present simple (step out) + will + passive (be exposed)." },
+      { en: "If she doesn't find a way to be financially independent, then she will be pressured to marry.", vi: "Nếu cô không tìm được cách tự chủ tài chính, cô sẽ bị áp lực phải lấy chồng.", analysis: "First conditional with negative condition. Note contracted 'doesn't'." }
+    ],
+    exercise: { q: "Fill in: 'If girls _____ (learn) about their rights, they _____ (be able) to raise their voices.'", answer: "learn / will be able" }
+  },
+  {
+    title: "Participle Clauses (reduced relative clauses)",
+    formula: "Noun + present/past participle + rest of clause",
+    explanation: "Mệnh đề phân từ dùng để rút gọn mệnh đề quan hệ, thường gặp trong văn viết trang trọng và báo chí.",
+    examples: [
+      { en: "Anjali Sharma is the district's Government officer responsible for the welfare of children.", vi: "Anjali Sharma là quan chức chính phủ quận chịu trách nhiệm về phúc lợi trẻ em.", analysis: "'responsible for welfare' is a reduced relative clause: 'who is responsible for...'" },
+      { en: "The women watching them are recording the spectacle on their smartphones.", vi: "Những người phụ nữ đang xem họ đang ghi lại cảnh tượng này trên điện thoại.", analysis: "'watching them' = present participle clause. Full form: 'who are watching them'." }
+    ],
+    exercise: { q: "Combine: 'The girls play football. They wear bright yellow jerseys.' → The girls _____ bright yellow jerseys play football.", answer: "wearing" }
+  }
+];
+
+// ─────────────────────────────────────────
+// QUIZ DATA
+// ─────────────────────────────────────────
+const quizData = [
+  {
+    type: "comprehension",
+    q: "Why was Munna initially saved from being married at age 14?",
+    options: ["She ran away from home.", "The other family didn't have a girl to exchange.", "A government officer intervened.", "She was too young even by local custom."],
+    correct: 1,
+    feedback: "Correct! Munna's mother refused the proposal because the other family couldn't guarantee a bride in exchange for her son — a key part of the local custom."
+  },
+  {
+    type: "comprehension",
+    q: "According to Padma Joshi, what was the main strategy for convincing parents to let girls play football?",
+    options: ["Telling them it would stop child marriage.", "Promising government job opportunities for sportspersons.", "Offering financial rewards to families.", "Threatening legal action against them."],
+    correct: 1,
+    feedback: "Correct! Padma deliberately avoided mentioning child marriage to parents — instead she focused on the practical benefit of government jobs allocated to athletes."
+  },
+  {
+    type: "comprehension",
+    q: "Out of Munna's village football team of 12 players, how many had been forced into early marriage?",
+    options: ["3", "6", "9", "12"],
+    correct: 2,
+    feedback: "Correct! 9 out of 12 players were forced into early marriage. Only Munna, her sister, and one other player successfully resisted the pressure."
+  },
+  {
+    type: "vocabulary",
+    q: "Which word best matches the meaning of 'illiterate'?",
+    options: ["Uneducated in general", "Unable to read and write", "Speaking multiple languages", "Living in poverty"],
+    correct: 1,
+    feedback: "'Illiterate' specifically means unable to read and write, not general lack of education."
+  },
+  {
+    type: "vocabulary",
+    q: "What does 'with complete abandon' mean in the context of the article?",
+    options: ["With sadness and resignation", "Having been abandoned by family", "Freely and without inhibition", "With complete concentration"],
+    correct: 2,
+    feedback: "Correct! 'With abandon' means without restraint or caution. Here it means the girls were playing freely, unconcerned about social judgement."
+  },
+  {
+    type: "grammar",
+    q: "Identify the correct passive form: 'People have forced many girls into early marriage.'",
+    options: ["Many girls forced into early marriage.", "Many girls have been forced into early marriage.", "Many girls have forced early marriage.", "Early marriage was forced by many girls."],
+    correct: 1,
+    feedback: "Correct! The present perfect passive is: Subject + have/has + been + past participle. 'Many girls have been forced into early marriage.'"
+  },
+  {
+    type: "grammar",
+    q: "Which sentence uses a participle clause correctly?",
+    options: ["The girls playing football, they feel free.", "The girls to play football feel free.", "The girls playing football feel free.", "The girls are playing football feeling free."],
+    correct: 2,
+    feedback: "Correct! 'The girls playing football feel free.' uses a present participle clause — it reduces 'who are playing football'."
+  }
+];
+
+// ─────────────────────────────────────────
+// DISCUSSION DATA
+// ─────────────────────────────────────────
+const discussionTopics = [
+  {
+    title: "Should sport be used as a social change tool?",
+    prompt: `You are Alex, an engaging English tutor at ${ARTICLE_LEVEL} level. The student wants to discuss this topic related to a BBC article they just read:\n\n"Should sport be used as a social change tool?"\n\nArticle context: ${ARTICLE_CONTEXT}\n\nRespond to the student's first message warmly, share your own view briefly, ask one follow-up question. Gently correct any grammar mistakes in a friendly way. Max 180 words per turn.`
+  },
+  {
+    title: "Why do you think laws alone fail to stop child marriage?",
+    prompt: `You are Alex, an engaging English tutor at ${ARTICLE_LEVEL} level. The student wants to discuss this topic related to a BBC article they just read:\n\n"Why do you think laws alone fail to stop child marriage?"\n\nArticle context: ${ARTICLE_CONTEXT}\n\nRespond to the student's first message warmly, acknowledge their point specifically, correct any grammar gently, and ask one follow-up question. Max 180 words per turn.`
+  },
+  {
+    title: "What does financial independence mean for women's freedom?",
+    prompt: `You are Alex, an engaging English tutor at ${ARTICLE_LEVEL} level. The student wants to discuss this topic related to a BBC article they just read:\n\n"What does financial independence mean for women's freedom?"\n\nArticle context: ${ARTICLE_CONTEXT}\n\nRespond to the student's first message warmly, engage with their argument, gently correct any language errors, and ask one follow-up question. Max 180 words per turn.`
+  },
+  {
+    title: "Is Munna's story inspiring or heartbreaking — or both?",
+    prompt: `You are Alex, an engaging English tutor at ${ARTICLE_LEVEL} level. The student wants to discuss this topic related to a BBC article they just read:\n\n"Is Munna's story inspiring or heartbreaking — or both?"\n\nArticle context: ${ARTICLE_CONTEXT}\n\nRespond to the student's first message empathetically, reflect on the emotional complexity, correct any language errors gently, and ask one follow-up question. Max 180 words per turn.`
+  }
+];
+
+// ─────────────────────────────────────────
+// WRITING DATA
+// ─────────────────────────────────────────
+const writingPrompts = [
+  {
+    title: "Write a letter from Munna to her future self",
+    desc: "Imagine you are Munna at 19. Write a short letter (120–180 words) to yourself 10 years in the future, describing your hopes, fears, and dreams.",
+    phrases: ["I hope that by now", "Looking back on those days", "Despite the challenges I faced", "I am proud to say", "My greatest wish for you is", "Never forget where you came from"]
+  },
+  {
+    title: "Argumentative paragraph: Should sport be compulsory for girls in Indian schools?",
+    desc: "Write a short argumentative paragraph (100–150 words) for or against making sport compulsory for girls in rural Indian schools.",
+    phrases: ["There is compelling evidence that", "On the other hand", "It is widely accepted that", "This is illustrated by the fact that", "One cannot ignore", "In conclusion, therefore"]
+  },
+  {
+    title: "Describe a social problem in your community and a creative solution",
+    desc: "Using Padma's Football for Freedom model as inspiration, describe a social problem in your community and propose a creative non-confrontational solution. (120–160 words)",
+    phrases: ["A persistent issue in my community is", "A creative approach would be", "Rather than directly confronting", "This would help by", "Over time, this could lead to", "The key is to"]
+  }
+];
+
+// ─────────────────────────────────────────
+// SHADOWING DATA
+// ─────────────────────────────────────────
+const shadowingData = [
+  {
+    chunks: [
+      { text: "It feels great.", cls: "ck0" },
+      { text: " We had never thought", cls: "ck1" },
+      { text: " that we will be able to go out to play", cls: "ck2" },
+      { text: " and wear shorts.", cls: "ck3" }
+    ],
+    vi: "Cảm giác thật tuyệt. Chúng tôi chưa bao giờ nghĩ rằng chúng tôi sẽ có thể ra ngoài chơi và mặc quần shorts.",
+    notes: "🔊 'never thought' — stress on NE-ver and THOUGHT. 'be able to' → rapid /biː eɪbl tə/, often sounds like 'bee-ay-bul-tuh'. Rising-then-falling intonation on 'great'.",
+    tags: ["Stress", "Rhythm"],
+    ipa: "/ɪt fiːlz ɡreɪt / wiː həd ˈnevər θɔːt / ðæt wiː wɪl biː ˈeɪbəl tə ɡəʊ aʊt tə pleɪ / ænd weər ʃɔːts/"
+  },
+  {
+    chunks: [
+      { text: "Instead of stopping", cls: "ck0" },
+      { text: " one or two marriages,", cls: "ck1" },
+      { text: " we believe sustained change", cls: "ck2" },
+      { text: " can only come", cls: "ck3" },
+      { text: " when their mindset changes.", cls: "ck0" }
+    ],
+    vi: "Thay vì ngăn chặn một hay hai cuộc hôn nhân, chúng tôi tin rằng sự thay đổi bền vững chỉ đến khi tư duy của họ thay đổi.",
+    notes: "🔊 'sustained' /səˈsteɪnd/ — stress on second syllable. Slight pause after 'marriages'. 'mindset' — compound noun: stress on MIND.",
+    tags: ["Linking", "Contrast"],
+    ipa: "/ɪnˈsted əv ˈstɒpɪŋ wʌn ɔː tuː ˈmærɪdʒɪz / wiː bɪˈliːv səˈsteɪnd tʃeɪndʒ / kæn ˈəʊnli kʌm / wen ðeər ˈmaɪndset ˈtʃeɪndʒɪz/"
+  },
+  {
+    chunks: [
+      { text: "Munna has battled these fears herself", cls: "ck1" },
+      { text: " and now wants to lead the fight", cls: "ck2" },
+      { text: " for other girls.", cls: "ck3" }
+    ],
+    vi: "Munna đã tự mình đương đầu với những nỗi sợ hãi này và bây giờ muốn dẫn đầu cuộc chiến cho những cô gái khác.",
+    notes: "🔊 'herself' — emphatic reflexive pronoun, stress on SELF. 'battled' /ˈbætəld/ — schwa in middle. Intonation rises on 'lead the fight' to signal purpose.",
+    tags: ["Intonation", "Schwa"],
+    ipa: "/ˈmʌnə həz ˈbætəld ðiːz fɪəz həˈself / ænd naʊ wɒnts tə liːd ðə faɪt / fər ˈʌðər ɡɜːlz/"
+  },
+  {
+    chunks: [
+      { text: "The girls break into", cls: "ck0" },
+      { text: " a spontaneous dance.", cls: "ck2" },
+      { text: " One is even crying.", cls: "ck1" },
+      { text: " Joy and relief", cls: "ck3" },
+      { text: " at being able to dream.", cls: "ck0" }
+    ],
+    vi: "Các bé gái bắt đầu nhảy múa một cách tự phát. Một em thậm chí còn khóc. Niềm vui và sự nhẹ nhõm khi được phép mơ ước.",
+    notes: "🔊 'spontaneous' /spɒnˈteɪniəs/ — 4 syllables, stress on 2nd. 'break into' = phrasal verb meaning to suddenly start. Short emphatic sentences: pause after each for dramatic rhythm.",
+    tags: ["Rhythm", "Intonation"],
+    ipa: "/ðə ɡɜːlz breɪk ˈɪntə / ə spɒnˈteɪniəs dɑːns / wʌn ɪz ˈiːvən ˈkraɪɪŋ / dʒɔɪ ænd rɪˈliːf / æt ˈbiːɪŋ eɪbl tə driːm/"
+  },
+  {
+    chunks: [
+      { text: "Though illegal,", cls: "ck3" },
+      { text: " child marriage", cls: "ck0" },
+      { text: " is widely practiced in India,", cls: "ck1" },
+      { text: " especially here in Rajasthan.", cls: "ck2" }
+    ],
+    vi: "Mặc dù bất hợp pháp, hôn nhân trẻ em vẫn được thực hành rộng rãi ở Ấn Độ, đặc biệt là ở đây tại Rajasthan.",
+    notes: "🔊 'Though' — contrastive connector: slight rise-fall. 'widely practiced' — adverb+adjective cluster: stress on WIDE and PRAC. 'Rajasthan' /ˌrɑː.dʒəˈstɑːn/ — stress on final syllable.",
+    tags: ["Contrast", "Linking"],
+    ipa: "/ðəʊ ɪˈliːɡəl / tʃaɪld ˈmærɪdʒ / ɪz ˈwaɪdli ˈpræktɪst ɪn ˈɪndiə / ɪˈspeʃəli hɪər ɪn ˌrɑːdʒəˈstɑːn/"
+  },
+  {
+    chunks: [
+      { text: "It's not like they will play in competitions", cls: "ck0" },
+      { text: " and finish their education,", cls: "ck1" },
+      { text: " and then somebody is waiting", cls: "ck2" },
+      { text: " to give them jobs.", cls: "ck3" }
+    ],
+    vi: "Không phải là họ sẽ thi đấu trong các cuộc thi và hoàn thành việc học, rồi sau đó có ai đó đang chờ để cho họ việc làm.",
+    notes: "🔊 'It's not like' — idiomatic opener meaning 'it's not the case that'. Rising intonation through the list (competitions → education) then falling on 'jobs'. Rhythm: long sentence, keep breath steady.",
+    tags: ["Intonation", "Rhythm"],
+    ipa: "/ɪts nɒt laɪk ðeɪ wɪl pleɪ ɪn ˌkɒmpɪˈtɪʃənz / ænd ˈfɪnɪʃ ðeər ˌedjʊˈkeɪʃən / ænd ðen ˈsʌmbədi ɪz ˈweɪtɪŋ / tə ɡɪv ðem dʒɒbz/"
+  }
+];
+
+// ─────────────────────────────────────────
+// RENDER FUNCTIONS
+// ─────────────────────────────────────────
+
+function renderBilingual() {
+  const container = document.getElementById('bilingualContainer');
+  bilingualData.forEach(p => {
+    const div = document.createElement('div');
+    div.className = 'bilingual-para';
+    div.innerHTML = `
+      <div class="lang-en">
+        <div class="speaker-label">${p.speaker}</div>
+        <p>${p.en}</p>
+      </div>
+      <div class="lang-vi">
+        <div class="speaker-label" style="color:var(--text-light)">Tiếng Việt</div>
+        <p>${p.vi}</p>
+      </div>`;
+    container.appendChild(div);
+  });
+}
+
+function renderVocab() {
+  const container = document.getElementById('vocabContainer');
+  vocabData.forEach(v => {
+    const card = document.createElement('div');
+    card.className = 'vocab-card';
+    card.innerHTML = `
+      <div class="vocab-word">${v.word}</div>
+      <div class="vocab-ipa">${v.ipa}</div>
+      <span class="vocab-pos">${v.pos}</span>
+      <div class="vocab-meaning">${v.meaning}</div>
+      <div class="vocab-example">${v.example}</div>
+      <div class="vocab-ex-vi">${v.exVi}</div>`;
+    container.appendChild(card);
+  });
+}
+
+function renderGrammar() {
+  const container = document.getElementById('grammarContainer');
+  grammarData.forEach((g, i) => {
+    const div = document.createElement('div');
+    div.className = 'grammar-block';
+    const exHTML = g.examples.map(ex => `
+      <div class="grammar-example">
+        <div class="en">"${ex.en}"</div>
+        <div class="vi">${ex.vi}</div>
+        <div class="analysis">▶ ${ex.analysis}</div>
+      </div>`).join('');
+    div.innerHTML = `
+      <div class="grammar-title">${g.title}</div>
+      <p style="font-size:0.88rem;margin-bottom:0.5rem;color:var(--text-light)">${g.explanation}</p>
+      <div class="grammar-formula">${g.formula}</div>
+      ${exHTML}
+      <div class="exercise-area">
+        <div class="exercise-q">✏️ Bài tập: ${g.exercise.q}</div>
+        <input class="exercise-input" type="text" placeholder="Điền vào đây...">
+        <br>
+        <button class="show-ans-btn" data-idx="${i}">Xem đáp án</button>
+        <div class="answer-reveal" id="ans-${i}">✅ Đáp án: <strong>${g.exercise.answer}</strong></div>
+      </div>`;
+    container.appendChild(div);
+  });
+
+  container.querySelectorAll('.show-ans-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const reveal = document.getElementById(`ans-${btn.dataset.idx}`);
+      reveal.style.display = reveal.style.display === 'block' ? 'none' : 'block';
+      btn.textContent = reveal.style.display === 'block' ? 'Ẩn đáp án' : 'Xem đáp án';
+    });
+  });
+}
+
+function renderExercises() {
+  const container = document.getElementById('exercisesContainer');
+  quizData.forEach((q, qi) => {
+    const div = document.createElement('div');
+    div.className = 'quiz-q';
+    const typeLabel = { comprehension: '📖 Đọc hiểu', vocabulary: '📚 Từ vựng', grammar: '🔤 Ngữ pháp' }[q.type] || '';
+    div.innerHTML = `
+      <div style="font-family:'Space Mono',monospace;font-size:0.6rem;color:var(--text-light);margin-bottom:0.4rem;letter-spacing:0.08em;">${typeLabel}</div>
+      <div class="quiz-q-text">Q${qi+1}. ${q.q}</div>
+      <div class="quiz-options"></div>
+      <div class="quiz-feedback" id="fb-${qi}"></div>`;
+    const opts = div.querySelector('.quiz-options');
+    q.options.forEach((opt, oi) => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-opt';
+      btn.textContent = `${['A','B','C','D'][oi]}. ${opt}`;
+      btn.addEventListener('click', () => {
+        if (div.dataset.answered) return;
+        div.dataset.answered = '1';
+        const isCorrect = oi === q.correct;
+        btn.classList.add(isCorrect ? 'correct' : 'wrong');
+        if (!isCorrect) opts.querySelectorAll('.quiz-opt')[q.correct].classList.add('correct');
+        const fb = document.getElementById(`fb-${qi}`);
+        fb.className = `quiz-feedback show ${isCorrect ? 'ok' : 'no'}`;
+        fb.textContent = (isCorrect ? '✅ ' : '❌ ') + q.feedback;
+      });
+      opts.appendChild(btn);
+    });
+    container.appendChild(div);
+  });
+}
+
+function makeAIBtns(prompt) {
+  const wrap = document.createElement('div');
+  wrap.className = 'ai-btns';
+
+  const btnClaude = document.createElement('button');
+  btnClaude.className = 'ai-btn btn-claude';
+  btnClaude.textContent = '🤖 Claude';
+  btnClaude.addEventListener('click', () => openAIChat('claude', prompt));
+
+  const btnCopy = document.createElement('button');
+  btnCopy.className = 'ai-btn btn-copy';
+  btnCopy.textContent = '📋 Copy prompt';
+  btnCopy.addEventListener('click', () => copyPromptToClipboard(prompt));
+
+  const btnDeepSeek = document.createElement('button');
+  btnDeepSeek.className = 'ai-btn btn-deepseek';
+  btnDeepSeek.textContent = '🔵 DeepSeek';
+  btnDeepSeek.addEventListener('click', () => openAIChat('deepseek', prompt));
+
+  const btnGPT = document.createElement('button');
+  btnGPT.className = 'ai-btn btn-chatgpt';
+  btnGPT.textContent = '💬 ChatGPT';
+  btnGPT.addEventListener('click', () => openAIChat('chatgpt', prompt));
+
+  [btnClaude, btnCopy, btnDeepSeek, btnGPT].forEach(b => wrap.appendChild(b));
+  return wrap;
+}
+
+function renderDiscussion() {
+  const container = document.getElementById('discussionContainer');
+  discussionTopics.forEach((topic, ti) => {
+    const btn = document.createElement('button');
+    btn.className = 'disc-btn';
+    btn.textContent = `💬 ${topic.title}`;
+
+    const panel = document.createElement('div');
+    panel.className = 'disc-panel';
+    panel.innerHTML = `<div class="disc-panel-title">Chủ đề đã chọn: "${topic.title}"</div>
+      <p style="font-size:0.83rem;color:var(--text-light);margin-bottom:0.6rem">Bấm vào nút dưới để bắt đầu thảo luận với AI tutor:</p>`;
+    panel.appendChild(makeAIBtns(topic.prompt));
+
+    btn.addEventListener('click', () => {
+      const isOpen = panel.classList.contains('show');
+      document.querySelectorAll('.disc-panel').forEach(p => p.classList.remove('show'));
+      document.querySelectorAll('.disc-btn').forEach(b => b.classList.remove('open'));
+      if (!isOpen) {
+        panel.classList.add('show');
+        btn.classList.add('open');
+      }
+    });
+
+    container.appendChild(btn);
+    container.appendChild(panel);
+  });
+}
+
+function renderWriting() {
+  const container = document.getElementById('writingContainer');
+  writingPrompts.forEach((wp, wi) => {
+    const btn = document.createElement('button');
+    btn.className = 'writing-card-btn';
+    btn.innerHTML = `<strong>✍️ ${wp.title}</strong><br><span style="font-size:0.82rem;color:var(--text-light)">${wp.desc}</span>`;
+
+    const editor = document.createElement('div');
+    editor.className = 'writing-editor';
+
+    const wc = document.createElement('div');
+    wc.className = 'word-count-bar';
+    wc.textContent = 'Số từ: 0';
+
+    const toolbar = document.createElement('div');
+    toolbar.className = 'phrase-toolbar';
+    wp.phrases.forEach(ph => {
+      const chip = document.createElement('button');
+      chip.className = 'phrase-chip';
+      chip.textContent = ph;
+      chip.addEventListener('click', () => {
+        ta.value += (ta.value ? ' ' : '') + ph;
+        ta.dispatchEvent(new Event('input'));
+        ta.focus();
+      });
+      toolbar.appendChild(chip);
+    });
+
+    const ta = document.createElement('textarea');
+    ta.className = 'writing-textarea';
+    ta.placeholder = 'Viết bài của bạn ở đây...';
+    ta.addEventListener('input', () => {
+      const words = ta.value.trim() ? ta.value.trim().split(/\s+/).length : 0;
+      wc.textContent = `Số từ: ${words}`;
+    });
+
+    const getWritingPrompt = () => `You are an expert English writing coach. Evaluate the following student essay at ${ARTICLE_LEVEL} level.\n\nArticle context: ${ARTICLE_CONTEXT}\n\nWriting task: "${wp.title}"\nTask description: "${wp.desc}"\n\nStudent's writing:\n"${ta.value}"\n\nPlease provide:\n1. Score out of 10 for: Content / Vocabulary / Grammar / Structure (with brief reasoning)\n2. Two specific strengths with direct quotations from the essay\n3. Up to 3 grammar corrections with explanations\n4. 2-3 vocabulary upgrade suggestions (original → better option)\n5. One comment on essay structure\n6. One encouraging closing remark tailored to this specific student`;
+
+    editor.appendChild(wc);
+    editor.appendChild(toolbar);
+    editor.appendChild(ta);
+
+    const aiLabel = document.createElement('div');
+    aiLabel.style.cssText = 'font-family:Space Mono,monospace;font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);margin-top:0.8rem;margin-bottom:0.4rem';
+    aiLabel.textContent = 'Nhận phản hồi từ AI:';
+    editor.appendChild(aiLabel);
+    editor.appendChild(makeAIBtns(getWritingPrompt()));
+
+    btn.addEventListener('click', () => {
+      const isOpen = editor.classList.contains('show');
+      document.querySelectorAll('.writing-editor').forEach(e => e.classList.remove('show'));
+      document.querySelectorAll('.writing-card-btn').forEach(b => b.classList.remove('open'));
+      if (!isOpen) {
+        editor.classList.add('show');
+        btn.classList.add('open');
+      }
+    });
+
+    container.appendChild(btn);
+    container.appendChild(editor);
+  });
+}
+
+function renderShadowing() {
+  const container = document.getElementById('shadowingContainer');
+  shadowingData.forEach((s, si) => {
+    const card = document.createElement('div');
+    card.className = 'shadow-card';
+
+    const chunkLine = document.createElement('div');
+    chunkLine.className = 'chunk-line';
+    s.chunks.forEach(ck => {
+      const sp = document.createElement('span');
+      sp.className = ck.cls;
+      sp.textContent = ck.text;
+      chunkLine.appendChild(sp);
+    });
+
+    const vi = document.createElement('div');
+    vi.className = 'shadow-vi';
+    vi.textContent = s.vi;
+
+    const notes = document.createElement('div');
+    notes.className = 'shadow-notes';
+    notes.textContent = s.notes;
+
+    const tags = document.createElement('div');
+    tags.className = 'shadow-tags';
+    s.tags.forEach(t => {
+      const tag = document.createElement('span');
+      tag.className = 'shadow-tag';
+      tag.textContent = t;
+      tags.appendChild(tag);
+    });
+
+    const ipaBtn = document.createElement('button');
+    ipaBtn.className = 'ipa-toggle-btn';
+    ipaBtn.textContent = 'Show IPA';
+
+    const ipaReveal = document.createElement('div');
+    ipaReveal.className = 'ipa-reveal';
+    ipaReveal.textContent = s.ipa;
+
+    ipaBtn.addEventListener('click', () => {
+      const isShown = ipaReveal.style.display === 'block';
+      ipaReveal.style.display = isShown ? 'none' : 'block';
+      ipaBtn.textContent = isShown ? 'Show IPA' : 'Hide IPA';
+    });
+
+    card.appendChild(chunkLine);
+    card.appendChild(vi);
+    card.appendChild(notes);
+    card.appendChild(tags);
+    card.appendChild(ipaBtn);
+    card.appendChild(ipaReveal);
+    container.appendChild(card);
+  });
+}
+
+// ── FLASHCARD ──
+let fcWords = [...vocabData];
+let fcIdx = 0;
+let fcFlipped = false;
+let fcMode = 'EN'; // EN or VN
+let fcKnown = new Set();
+let fcUnknown = new Set();
+
+function renderFlashcard() {
+  const area = document.getElementById('flashcardArea');
+
+  const progWrap = document.createElement('div');
+  progWrap.className = 'fc-progress-bar-wrap';
+  const progBar = document.createElement('div');
+  progBar.className = 'fc-progress-bar';
+  progBar.id = 'fcProgBar';
+  progWrap.appendChild(progBar);
+
+  const counter = document.createElement('div');
+  counter.className = 'fc-counter';
+  counter.id = 'fcCounter';
+
+  const scene = document.createElement('div');
+  scene.className = 'fc-scene';
+  const card = document.createElement('div');
+  card.className = 'fc-card';
+  card.id = 'fcCard';
+
+  const front = document.createElement('div');
+  front.className = 'fc-face fc-front';
+  front.id = 'fcFront';
+
+  const back = document.createElement('div');
+  back.className = 'fc-face fc-back';
+  back.id = 'fcBack';
+
+  card.appendChild(front);
+  card.appendChild(back);
+  scene.appendChild(card);
+
+  card.addEventListener('click', flipCard);
+
+  const rating = document.createElement('div');
+  rating.className = 'fc-rating';
+  rating.id = 'fcRating';
+
+  const knowBtn = document.createElement('button');
+  knowBtn.className = 'fc-rate-btn know';
+  knowBtn.textContent = '✅ Thuộc rồi';
+  knowBtn.addEventListener('click', () => markCard(true));
+
+  const dontBtn = document.createElement('button');
+  dontBtn.className = 'fc-rate-btn dontknow';
+  dontBtn.textContent = '❌ Chưa thuộc';
+  dontBtn.addEventListener('click', () => markCard(false));
+
+  rating.appendChild(knowBtn);
+  rating.appendChild(dontBtn);
+
+  const controls = document.createElement('div');
+  controls.className = 'fc-controls';
+
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'fc-ctrl-btn';
+  prevBtn.textContent = '← Prev';
+  prevBtn.addEventListener('click', () => { fcIdx = (fcIdx - 1 + fcWords.length) % fcWords.length; showCard(); });
+
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'fc-ctrl-btn';
+  nextBtn.textContent = 'Next →';
+  nextBtn.addEventListener('click', () => { fcIdx = (fcIdx + 1) % fcWords.length; showCard(); });
+
+  const shuffleBtn = document.createElement('button');
+  shuffleBtn.className = 'fc-ctrl-btn';
+  shuffleBtn.textContent = '🔀 Shuffle';
+  shuffleBtn.addEventListener('click', () => {
+    for (let i = fcWords.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [fcWords[i], fcWords[j]] = [fcWords[j], fcWords[i]];
+    }
+    fcIdx = 0; showCard();
+  });
+
+  const resetBtn = document.createElement('button');
+  resetBtn.className = 'fc-ctrl-btn';
+  resetBtn.textContent = '↺ Reset';
+  resetBtn.addEventListener('click', () => { fcIdx = 0; fcKnown = new Set(); fcUnknown = new Set(); fcWords = [...vocabData]; showCard(); });
+
+  const modeBtn = document.createElement('button');
+  modeBtn.className = 'fc-ctrl-btn fc-mode-toggle';
+  modeBtn.id = 'fcModeBtn';
+  modeBtn.textContent = 'EN → VN';
+  modeBtn.addEventListener('click', () => {
+    fcMode = fcMode === 'EN' ? 'VN' : 'EN';
+    modeBtn.textContent = fcMode === 'EN' ? 'EN → VN' : 'VN → EN';
+    showCard();
+  });
+
+  [prevBtn, nextBtn, shuffleBtn, resetBtn, modeBtn].forEach(b => controls.appendChild(b));
+
+  const stats = document.createElement('div');
+  stats.className = 'fc-stats';
+  stats.id = 'fcStats';
+
+  area.appendChild(progWrap);
+  area.appendChild(counter);
+  area.appendChild(scene);
+  area.appendChild(rating);
+  area.appendChild(controls);
+  area.appendChild(stats);
+
+  showCard();
+}
+
+function showCard() {
+  const front = document.getElementById('fcFront');
+  const back = document.getElementById('fcBack');
+  const card = document.getElementById('fcCard');
+  const rating = document.getElementById('fcRating');
+  const counter = document.getElementById('fcCounter');
+  const progBar = document.getElementById('fcProgBar');
+  const stats = document.getElementById('fcStats');
+
+  card.classList.remove('flipped');
+  fcFlipped = false;
+  rating.classList.remove('show');
+
+  const w = fcWords[fcIdx];
+  const total = fcWords.length;
+  counter.textContent = `${fcIdx + 1} / ${total}`;
+  progBar.style.width = `${((fcIdx + 1) / total) * 100}%`;
+
+  // Front
+  front.innerHTML = '';
+  const fw = document.createElement('div');
+  fw.className = 'fc-front-word';
+  fw.textContent = fcMode === 'EN' ? w.word : w.meaning;
+  const fh = document.createElement('div');
+  fh.className = 'fc-front-hint';
+  fh.textContent = '👆 Tap to reveal';
+  front.appendChild(fw);
+  front.appendChild(fh);
+
+  // Back
+  back.innerHTML = `
+    <div class="fc-back-word">${w.word}</div>
+    <div class="fc-back-ipa">${w.ipa}</div>
+    <span class="fc-back-pos">${w.pos}</span>
+    <div class="fc-back-meaning">${w.meaning}</div>
+    <div class="fc-back-example"><em>"${w.example}"</em><br>${w.exVi}</div>`;
+
+  const knownCount = fcKnown.size;
+  stats.textContent = `✅ Thuộc: ${knownCount} / ${total} từ`;
+}
+
+function flipCard() {
+  const card = document.getElementById('fcCard');
+  const rating = document.getElementById('fcRating');
+  fcFlipped = !fcFlipped;
+  card.classList.toggle('flipped', fcFlipped);
+  if (fcFlipped) rating.classList.add('show');
+  else rating.classList.remove('show');
+}
+
+function markCard(know) {
+  const w = fcWords[fcIdx];
+  if (know) { fcKnown.add(w.word); fcUnknown.delete(w.word); }
+  else { fcUnknown.add(w.word); fcKnown.delete(w.word); }
+  fcIdx = (fcIdx + 1) % fcWords.length;
+  showCard();
+}
+
+// ─────────────────────────────────────────
+// AI UTILITIES
+// ─────────────────────────────────────────
+function showToast(msg, duration = 3000) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), duration);
+}
+
+function copyPromptToClipboard(prompt) {
+  navigator.clipboard.writeText(prompt).then(() => {
+    showToast('✅ Đã sao chép prompt vào clipboard!');
+  }).catch(() => {
+    showToast('⚠️ Không sao chép được. Hãy thử lại.');
+  });
+}
+
+function openAIChat(platform, prompt) {
+  if (platform === 'claude') {
+    const url = `https://claude.ai/new?q=${encodeURIComponent(prompt)}`;
+    window.open(url, '_blank');
+  } else if (platform === 'deepseek') {
+    navigator.clipboard.writeText(prompt).catch(() => {});
+    window.open('https://chat.deepseek.com', '_blank');
+    showToast('📋 Prompt đã được copy — dán vào DeepSeek!', 4000);
+  } else if (platform === 'chatgpt') {
+    navigator.clipboard.writeText(prompt).then(() => {
+      window.open('https://chat.openai.com', '_blank');
+      showToast('📋 Prompt đã được copy — dán vào ChatGPT!', 4000);
+    }).catch(() => {
+      showToast('⚠️ Không sao chép được tự động. Hãy copy thủ công.', 4000);
+    });
+  }
+}
+
+// ─────────────────────────────────────────
+// TAB SWITCHING
+// ─────────────────────────────────────────
+function switchTab(tabName) {
+  document.querySelectorAll('.nav-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.tab === tabName);
+  });
+  document.querySelectorAll('.tab-panel').forEach(p => {
+    p.classList.toggle('active', p.dataset.panel === tabName);
+  });
+  window.scrollTo({ top: document.getElementById('mainContent').offsetTop - 50, behavior: 'smooth' });
+}
+
+document.querySelectorAll('.nav-tab').forEach(tab => {
+  tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+});
+
+// ─────────────────────────────────────────
+// SCROLL — HERO NAV BEHAVIOR
+// ─────────────────────────────────────────
+const hero = document.getElementById('hero');
+const heroNav = document.getElementById('heroNav');
+const navFixed = document.getElementById('navFixed');
+const navSpacer = document.getElementById('navSpacer');
+const summaryInner = document.getElementById('summaryInner');
+const toggleViBtn = document.getElementById('toggleViBtn');
+const summaryVi = document.getElementById('summaryVi');
+
+function checkNavVisibility() {
+  const heroBottom = hero.getBoundingClientRect().bottom;
+  const isFixed = heroBottom <= 0;
+
+  if (isFixed) {
+    navFixed.classList.add('visible');
+    navSpacer.classList.add('visible');
+  } else {
+    navFixed.classList.remove('visible');
+    navSpacer.classList.remove('visible');
+  }
+
+  // Check if summary is overlapping nav
+  if (!isFixed) {
+    const navRect = heroNav.getBoundingClientRect();
+    const summaryRect = summaryInner.getBoundingClientRect();
+    if (summaryRect.bottom > navRect.top - 10) {
+      heroNav.classList.add('vi-hidden');
+    } else {
+      heroNav.classList.remove('vi-hidden');
+    }
+  } else {
+    heroNav.classList.remove('vi-hidden');
+  }
+}
+
+window.addEventListener('scroll', checkNavVisibility, { passive: true });
+
+toggleViBtn.addEventListener('click', () => {
+  const isOpen = summaryVi.style.display === 'block';
+  summaryVi.style.display = isOpen ? 'none' : 'block';
+  toggleViBtn.textContent = isOpen ? '🇻🇳 Xem bản dịch' : '🙈 Ẩn bản dịch';
+  summaryInner.classList.toggle('vi-open', !isOpen);
+  setTimeout(checkNavVisibility, 50);
+});
+
+// ─────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────
+renderBilingual();
+renderVocab();
+renderGrammar();
+renderExercises();
+renderDiscussion();
+renderWriting();
+renderShadowing();
+renderFlashcard();
+checkNavVisibility();
+</script>
+</body>
+</html>
